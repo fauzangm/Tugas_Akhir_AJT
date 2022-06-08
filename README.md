@@ -56,12 +56,22 @@ Pada Ketentuan tugas Kita akan membuat akun EC2 INSTANCE dengan spesifikasi seba
 
 ## MEMBUAT CUSTOM TOPOLOGY MININET SEPERTI PADA TUGAS2
 
-- ### Topolgy yang digunakan 
+- ### Topolgy yang digunakan
+
+
+ ![Screenshot from 2022-06-08 13-17-19](https://user-images.githubusercontent.com/83495936/172545421-123c3add-bbb6-404c-9bcd-5fcf994a82f2.png)
+
+
+
+- ### Program yang digunakan
 
 - ### Setelah itu akan menjalankan mininet tanpa controller menggunakan custom topo yang sudah dibuat
 
 
 - ### Membuat Flow agar h1,h2 dan h3 saling terhubung dengan perintah 
+
+
+- ### Melakuka Uji Koneksu
 
 
 
