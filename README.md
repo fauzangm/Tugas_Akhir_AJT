@@ -1,4 +1,4 @@
-# ----------------------------TUGAS AKHIR ARISTEKTUR JARINGAN TERKINI -----------------------
+## TUGAS AKHIR ARISTEKTUR JARINGAN TERKINI 
 
 # Table Of Contents
 
@@ -24,7 +24,7 @@ Pada Ketentuan tugas Kita akan membuat akun EC2 INSTANCE dengan spesifikasi seba
 - Configure storage	= 30 GiB, gp3
 
 
-![Uploading Screenshot from 2022-06-07 13-40-04.png…]()
+![Screenshot from 2022-06-07 13-40-04](https://user-images.githubusercontent.com/83495936/172538348-95fb5e09-5cbb-47da-95aa-714586f75dc0.png)
 
 
 
