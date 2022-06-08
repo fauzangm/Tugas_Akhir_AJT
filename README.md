@@ -4,6 +4,7 @@
 
 - [MEMBUAT EC2 INSTANCE di AWS ACADEMY](#membuat-ec2-instance-di-aws-academy)
 - [MEMBUAT CUSTOM TOPOLOGY MININET SEPERTI PADA TUGAS2](#membuat-custom-topology-mininet-seperti-pada-tugas2)
+- [MEMBUAT APLIKASI RYU LOAD BALANCER SEPERTI PADA TUGAS 3](#membuat-aplikasi-ryu-load-balancer-seperti-pada-tugas-3)
 
 
 
@@ -59,21 +60,24 @@ Pada Ketentuan tugas Kita akan membuat akun EC2 INSTANCE dengan spesifikasi seba
 - ### Topolgy yang digunakan
 
 
- ![Screenshot from 2022-06-08 13-17-19](https://user-images.githubusercontent.com/83495936/172545421-123c3add-bbb6-404c-9bcd-5fcf994a82f2.png)
-
-
 
 - ### Program yang digunakan
 
+
 - ### Setelah itu akan menjalankan mininet tanpa controller menggunakan custom topo yang sudah dibuat
+<br> Lakukan dengan perintah sudo mn --controller=none --custom custom_topo_2sw2h.py --topo mytopo --mac --arp
 
 
 - ### Membuat Flow agar h1,h2 dan h3 saling terhubung dengan perintah 
 
 
-- ### Melakuka Uji Koneksu
+- ### Melakuka Uji Koneksi
 
 
+## MEMBUAT APLIKASI RYU LOAD BALANCER SEPERTI PADA TUGAS 3
+
+
+- ### Topolgy yang digunakan
 
 
 
