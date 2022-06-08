@@ -3,7 +3,7 @@
 # Table Of Contents
 
 - [MEMBUAT EC2 INSTANCE di AWS ACADEMY](#membuat-ec2-instance-di-aws-academy)
-- [Dynamic Analysis](#dynamic-analysis)
+- [Membuat Custom Topology Mininet seperti pada Tugas2](#membuat-custom-topology-mininet-seperti-pada-tugas2)
 - [Disassembler](#disassembler)
 - [Breakpoint](#breakpoint)
 - [Register](#register)
@@ -52,16 +52,20 @@ Pada Ketentuan tugas Kita akan membuat akun EC2 INSTANCE dengan spesifikasi seba
 
 <br> Langkah Kedua Unduh repository Mininet dengan perintah git clone https://github.com/mininet/mininet  dan lakukan instalasi dengan perintah mininet/util/install.sh -nfv </br>
 
-<br> Langkah Ketiga Unduh repository RYU dengan perintah git clone https://github.com/mininet/mininet  dan lakukan instalasi dengan perintah mininet/util/install.sh -nfv </br>
+<br> Langkah Ketiga Unduh repository RYU dengan perintah git clone https://github.com/mininet/mininet  dan lakukan instalasi dengan perintah cd ryu; pip install </br>
+
+<br> Langkah Keempat Unduh repository Flow Manager dengan perintah git clone https://github.com/martimy/flowmanager  setelah selesai kita cek dengan perintah ls </br>
+
+
+
+![Screenshot from 2022-06-07 14-06-25](https://user-images.githubusercontent.com/83495936/172542516-8d7b9a65-31a8-4931-9a5c-857d747a7d60.png)
 
 
 
 
 
 
-
-
-## Dynamic Analysis
+## Membuat Custom Topology Mininet seperti pada Tugas2
 
 Dalam Dynamic analysis pengujian program dengan menganalisis dan mengeksekusi program secara real time atau memahami program dengan menjalankannya (Debugging)
 
