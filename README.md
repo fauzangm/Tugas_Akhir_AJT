@@ -524,7 +524,9 @@ self.serverlist.append({'ip':"10.0.0.4", 'mac':"00:00:00:00:00:04",
 ![Screenshot from 2022-04-10 15-53-58](https://user-images.githubusercontent.com/83495936/172579401-4b54df52-7dd6-43f3-a3dd-4dd774611055.png)
 
 
-### Pada bagian h2,h3,h4 akan menjadi web server dan memberikan paket ke client yaitu h1. Pada sisi h1 webserver dan didapati dengan algoritma round robin yang memberikan paket ke h1 adalah server h2 dengan ip 10.0.0.2
+### Web Server Memberikan Packet ke CLient
+
+Pada bagian h2,h3,h4 akan menjadi web server dan memberikan paket ke client yaitu h1. Pada sisi h1 melakukan akses ke webserver dan didapati dengan algoritma round robin yang memberikan paket ke h1 adalah server h2 dengan ip 10.0.0.2
 
 ![Screenshot from 2022-04-10 15-58-22](https://user-images.githubusercontent.com/83495936/172579471-471f1797-0485-473e-9f06-8288b7c1d126.png)
 
