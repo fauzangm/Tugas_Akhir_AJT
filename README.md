@@ -57,6 +57,90 @@ Pada Ketentuan tugas Kita akan membuat akun EC2 INSTANCE dengan spesifikasi seba
 
 ## MEMBUAT CUSTOM TOPOLOGY MININET SEPERTI PADA TUGAS2
 
+## Topology Mininet 2 host dan 2 switch
+
+
+- ### Topolgy yang digunakan
+
+![Screenshot from 2022-06-08 15-57-17](https://user-images.githubusercontent.com/83495936/172575987-d1532576-84d5-4495-849c-f43aed2dedf5.png)
+
+
+- ### Source Code Yang Digunakan
+
+```
+#!/usr/bin/env python
+
+"""Custom topology example
+
+Two directly connected switches plus a host for each switch:
+
+   host --- switch --- switch --- host
+
+Adding the 'topos' dict with a key/value pair to generate our newly defined
+topology enables one to pass in '--topo=mytopo' from the command line.
+"""
+
+from mininet.topo import Topo
+from mininet.log import setLogLevel, info
+
+class MyTopo( Topo ):
+
+    def addSwitch(self, name, **opts ):
+        kwargs = { 'protocols' : 'OpenFlow13'}
+        kwargs.update( opts )
+        return super(MyTopo, self).addSwitch( name, **kwargs )
+
+    def __init__( self ):
+        "Create MyTopo topology..."
+        
+        # Inisialisasi Topology
+        Topo.__init__( self )
+
+        # Tambahkan node, switch, dan host
+        info( '*** Add switches\n')
+        s1 = self.addSwitch('s1')
+        s2 = self.addSwitch('s2')
+
+        info( '*** Add hosts\n')
+        h1 = self.addHost('h1', ip='10.1.0.1/24')
+        h2 = self.addHost('h2', ip='10.1.0.2/24')
+     
+        info( '*** Add links\n')
+        self.addLink(s1, h1, port1=1, port2=1)
+        self.addLink(s1, s2, port1=2, port2=1)
+        self.addLink(s2, h2, port1=2, port2=1)
+
+topos = { 'mytopo': ( lambda: MyTopo() ) }
+
+```
+
+- ### Menjalankan mininet tanpa controller menggunakan custom topo yang anda sudah buat
+``` sudo mn --controller=none --custom custom_topo_2sw2h.py --topo mytopo --mac --arp
+```
+
+
+![Screenshot from 2022-06-08 16-01-41](https://user-images.githubusercontent.com/83495936/172576915-ed54895d-95be-41d7-947f-73acfc2062d8.png)
+
+- ### Membuat flow agar h1 dapat terhubung dengan h2
+```
+mininet> sh ovs-ofctl add-flow s1 -O OpenFlow13 "in_port=1,action=output:2"
+mininet> sh ovs-ofctl add-flow s1 -O OpenFlow13 "in_port=2,action=output:1"
+mininet> sh ovs-ofctl add-flow s2 -O OpenFlow13 "in_port=1,action=output:2"
+mininet> sh ovs-ofctl add-flow s2 -O OpenFlow13 "in_port=2,action=output:1“
+```
+
+![Screenshot from 2022-06-08 16-05-25](https://user-images.githubusercontent.com/83495936/172577741-36c2f034-8ddc-4e70-b732-479684f3b5b3.png)
+
+- ### Uji koneksi agar h1 dan h2 terhubung
+
+
+![Screenshot from 2022-06-08 16-06-29](https://user-images.githubusercontent.com/83495936/172577994-816940b7-d6f5-4d1f-b5c7-e11403078f70.png)
+
+
+
+
+
+
 - ### Topolgy yang digunakan
 
 
