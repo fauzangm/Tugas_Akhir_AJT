@@ -24,6 +24,9 @@ Pada Ketentuan tugas Kita akan membuat akun EC2 INSTANCE dengan spesifikasi seba
 - Configure storage	= 30 GiB, gp3
 
 
+![Uploading Screenshot from 2022-06-07 13-40-04.png…]()
+
+
 
 
 ## Dynamic Analysis
