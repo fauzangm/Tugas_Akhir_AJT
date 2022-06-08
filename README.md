@@ -60,6 +60,9 @@ Pada Ketentuan tugas Kita akan membuat akun EC2 INSTANCE dengan spesifikasi seba
 - ### Topolgy yang digunakan
 
 
+ ![Screenshot from 2022-06-08 13-17-19](https://user-images.githubusercontent.com/83495936/172545421-123c3add-bbb6-404c-9bcd-5fcf994a82f2.png)
+
+
 
 - ### Program yang digunakan
 
@@ -78,6 +81,11 @@ Pada Ketentuan tugas Kita akan membuat akun EC2 INSTANCE dengan spesifikasi seba
 
 
 - ### Topolgy yang digunakan
+
+
+
+![Screenshot from 2022-06-08 13-41-57](https://user-images.githubusercontent.com/83495936/172551474-cc26435a-4aff-4cf4-8c34-2d16da56d352.png)
+
 
 
 
