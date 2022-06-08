@@ -509,7 +509,7 @@ self.serverlist.append({'ip':"10.0.0.4", 'mac':"00:00:00:00:00:04",
 
 
 ### Melakukan perintah pada console pertama 
-````ryu-manager``` 
+```ryu-manager``` 
 
 
 ![Screenshot from 2022-04-10 15-53-58](https://user-images.githubusercontent.com/83495936/172579401-4b54df52-7dd6-43f3-a3dd-4dd774611055.png)
@@ -777,6 +777,12 @@ adjacency[s2][s1] =
 ryu-manager --observe-links dijkstra_Ryu_controller.py
 ```
 
+![Screenshot from 2022-04-28 19-57-33](https://user-images.githubusercontent.com/83495936/172581484-55620e83-a0b2-45ea-9052-6c3644f8b342.png)
+
+
+
+
+
 
 
 ### Pada Terminal Console dua jalankan 
@@ -784,6 +790,8 @@ ryu-manager --observe-links dijkstra_Ryu_controller.py
 sudo python3 topo-spf_lab.py
 
 ```
+![Screenshot from 2022-04-28 19-58-47](https://user-images.githubusercontent.com/83495936/172581574-fe596788-a43d-4b8c-b3ea-19cf2b920dd7.png)
+
 
 ### Melakukan cek Konektivitas
 
@@ -796,7 +804,12 @@ pingall
 Hal ini dikarenakan pada saat awal melakukan pingall masih proses
 melakukan komputasi sehingga seluruh paket tidak terkirim </br>
 
+![Screenshot from 2022-04-28 20-04-07](https://user-images.githubusercontent.com/83495936/172581658-ced6eaf5-6f17-4882-9c55-4825fa1b8d81.png)
+
 <br>Pada Percobaan Kedua Pingall semua paket terkirim</br>
+
+![Screenshot from 2022-04-28 20-04-16](https://user-images.githubusercontent.com/83495936/172581717-175c0a93-110a-45d7-a946-0e9eee5743cb.png)
+
 
 ### Mengecek Flow dengan melakukan perintah dpctl dump-flows -O openflow13
 
@@ -804,7 +817,9 @@ melakukan komputasi sehingga seluruh paket tidak terkirim </br>
 semua tujuan sesuai dengan Topology. Pada perintah ini kita bisa melihat jalur node yang akan dilalui dengan algoritma Shortest Path Routing, dimana algoritma tersebut mencari rute terpendek.
 
 
-### Pengecekan Rute dari h1 ke h4 dengan algoritma Shortest Path Routing
+![Screenshot from 2022-04-28 20-09-11](https://user-images.githubusercontent.com/83495936/172582079-d61ddef9-1cc8-4451-a9c7-5fcba3cb1fc1.png)
 
+![Screenshot from 2022-04-28 20-09-31](https://user-images.githubusercontent.com/83495936/172582137-146707ff-37c7-4a1a-951a-737b5d707124.png)
 
+![Screenshot from 2022-04-28 20-09-36](https://user-images.githubusercontent.com/83495936/172582167-062897aa-275f-4610-907c-3df01b1f3c2f.png)
 
