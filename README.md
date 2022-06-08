@@ -402,3 +402,8 @@ self.serverlist.append({'ip':"10.0.0.4", 'mac':"00:00:00:00:00:04",
 
 ## MEMBUAT APLIKASI RYU SHORTEST PATH ROUTING SEPERTI PADA TUGAS 4
 
+
+### Topology yang digunakan
+
+![Screenshot from 2022-06-08 14-31-22](https://user-images.githubusercontent.com/83495936/172558321-1c30c48a-c7c0-4fab-9c3d-2bc7b5207360.png)
+
