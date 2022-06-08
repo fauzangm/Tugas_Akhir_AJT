@@ -3,7 +3,7 @@
 # Table Of Contents
 
 - [MEMBUAT EC2 INSTANCE di AWS ACADEMY](#membuat-ec2-instance-di-aws-academy)
-- [Membuat Custom Topology Mininet seperti pada Tugas2](#membuat-custom-topology-mininet-seperti-pada-tugas2)
+- [MEMBUAT CUSTOM TOPOLOGY MININET SEPERTI PADA TUGAS2](#membuat-custom-topology-mininet-seperti-pada-tugas2)
 
 
 
@@ -54,11 +54,17 @@ Pada Ketentuan tugas Kita akan membuat akun EC2 INSTANCE dengan spesifikasi seba
 
 ![Screenshot from 2022-06-07 14-06-25](https://user-images.githubusercontent.com/83495936/172542516-8d7b9a65-31a8-4931-9a5c-857d747a7d60.png)
 
+## MEMBUAT CUSTOM TOPOLOGY MININET SEPERTI PADA TUGAS2
+
+- ### Topolgy yang digunakan 
+
+- ### Setelah itu akan menjalankan mininet tanpa controller menggunakan custom topo yang sudah dibuat
+
+
+- ### Membuat Flow agar h1,h2 dan h3 saling terhubung dengan perintah 
 
 
 
 
-
-## Membuat Custom Topology Mininet seperti pada Tugas2
 
 
