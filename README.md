@@ -5,7 +5,7 @@
 - [MEMBUAT EC2 INSTANCE di AWS ACADEMY](#membuat-ec2-instance-di-aws-academy)
 - [MEMBUAT CUSTOM TOPOLOGY MININET SEPERTI PADA TUGAS2](#membuat-custom-topology-mininet-seperti-pada-tugas2)
 - [MEMBUAT APLIKASI RYU LOAD BALANCER SEPERTI PADA TUGAS 3](#membuat-aplikasi-ryu-load-balancer-seperti-pada-tugas-3)
-
+- [MEMBUAT APLIKASI RYU SHORTEST PATH ROUTING SEPERTI PADA TUGAS 4](#membuat-aplikasi-ryu-shortest-path-routing-seperti-pada-tugas-4)
 
 
 
@@ -65,6 +65,69 @@ Pada Ketentuan tugas Kita akan membuat akun EC2 INSTANCE dengan spesifikasi seba
 
 
 - ### Program yang digunakan
+
+```
+
+
+
+#!/usr/bin/env python
+
+"""Custom topology example
+
+Two directly connected switches plus a host for each switch:
+
+   host --- switch --- switch --- host
+
+Adding the 'topos' dict with a key/value pair to generate our newly defined
+topology enables one to pass in '--topo=mytopo' from the command line.
+"""
+
+from mininet.topo import Topo
+from mininet.log import setLogLevel, info
+
+
+class MyTopo( Topo ):
+
+    def addSwitch(self, name, **opts ):
+        kwargs = { 'protocols' : 'OpenFlow13'}
+        kwargs.update( opts )
+        return super(MyTopo, self).addSwitch( name, **kwargs )
+
+    def __init__( self ):
+        "Create MyTopo topology..."
+
+        # Inisialisasi Topology
+        Topo.__init__( self )
+
+        # Tambahkan node, switch, dan host
+        info( '*** Add switches\n')
+        s1 = self.addSwitch('s1',protocols= 'OpenFlow13')
+        s2 = self.addSwitch('s2',protocols= 'OpenFlow13')
+        s3 = self.addSwitch('s3',protocols= 'OpenFlow13')
+
+        info( '* Add hosts\n')
+        h1 = self.addHost('h1', ip='10.1.0.1/24')
+        h2 = self.addHost('h2', ip='10.1.0.2/24')
+        h3 = self.addHost('h3', ip='10.2.0.3/24')
+        h4 = self.addHost('h4', ip='10.2.0.4/24')
+        h5 = self.addHost('h5', ip='10.3.0.5/24')
+        h6 = self.addHost('h6', ip='10.3.0.6/24')
+
+        info( '*** Add links\n')
+        self.addLink(s1, h1, port1=2, port2=1)
+        self.addLink(s1, h2, port1=3, port2=1)
+        self.addLink(s2, h3, port1=3, port2=1)
+        self.addLink(s2, h4, port1=4, port2=1)
+        self.addLink(s3, h5, port1=2, port2=1)
+        self.addLink(s3, h6, port1=1, port2=1)
+
+        self.addLink(s3, s1, port1=3, port2=1)
+        self.addLink(s3, s2, port1=4, port2=1)
+        self.addLink(s1, s2, port1=4, port2=2)
+
+topos = { 'mytopo': ( lambda: MyTopo() ) }
+
+```
 
 
 - ### Setelah itu akan menjalankan mininet tanpa controller menggunakan custom topo yang sudah dibuat
@@ -313,14 +376,29 @@ MAC: "+str(server_mac_selected)+". Via load balancer:
 
 ### Memodifikasi Source Code pada sisi server dengan ip, mac dan outport sebagai berikut dan menentukan virtual ip server: 10.0.0.100
 
-<br>self.serverlist.append({'ip':"10.0.0.2", 'mac':"00:00:00:00:00:02",
-"outport":"2"}) </br>
 
-<br>self.serverlist.append({'ip':"10.0.0.3", 'mac':"00:00:00:00:00:03",
-"outport":"3"}) </br>
+```
+self.serverlist.append({'ip':"10.0.0.2", 'mac':"00:00:00:00:00:02",
+"outport":"2"}) 
 
-<br>self.serverlist.append({'ip':"10.0.0.4", 'mac':"00:00:00:00:00:04",
-"outport":"4"}) </br>
+self.serverlist.append({'ip':"10.0.0.3", 'mac':"00:00:00:00:00:03",
+"outport":"3"}) 
+
+self.serverlist.append({'ip':"10.0.0.4", 'mac':"00:00:00:00:00:04",
+"outport":"4"}) 
+```
 
 
+
+### Melakukan perintah ryu-manager pada terminal satu, dan melakukan perintah sudo mn --controller=remote --topo single,4 –mac pada terminal dua
+
+
+### Pada bagian h2,h3,h4 akan menjadi web server dan memberikan paket ke client yaitu h1. Pada sisi h1 webserver dan didapati dengan algoritma round robin yang memberikan paket ke h1 adalah server h2 dengan ip 10.0.0.2
+
+
+### Melakukan akses kembali ke webserver kepada h1 berulang kali untuk memastikan algoritma Round-Robin berjalan dengan baik dan melakukan dpctl dump-flows -O openflow13 untuk melihat flow
+
+
+
+## MEMBUAT APLIKASI RYU SHORTEST PATH ROUTING SEPERTI PADA TUGAS 4
 
