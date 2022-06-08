@@ -1,4 +1,4 @@
-## TUGAS AKHIR ARISTEKTUR JARINGAN TERKINI \n Fauzan Ghozi Mubarak \n 205150301111006 \n Teknik Komputer
+## TUGAS AKHIR ARISTEKTUR JARINGAN TERKINI <br>/n Fauzan Ghozi Mubarak</br> /n 205150301111006 /n Teknik Komputer
 
 # Table Of Contents
 
