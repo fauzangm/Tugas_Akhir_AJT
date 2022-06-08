@@ -38,7 +38,7 @@ Pada Ketentuan tugas Kita akan membuat akun EC2 INSTANCE dengan spesifikasi seba
 
 ![Screenshot from 2022-06-07 13-41-10](https://user-images.githubusercontent.com/83495936/172538678-635fde78-47df-4748-8147-21a8eb170b09.png)
 
-- Setelah Selesai Melakukan Konfigurasi EC2, Saya akan menghubungkannya denga terminal ubuntu
+- ## Setelah Selesai Melakukan Konfigurasi EC2, Saya akan menghubungkannya denga terminal ubuntu
 <br> Dengan melakukan perintah ssh -i labsuser.pem ubuntu@ipaddress </br>
 
 ![Screenshot from 2022-06-07 13-54-32](https://user-images.githubusercontent.com/83495936/172539424-5be6a254-6bb1-4a45-aff5-fc7117841a47.png)
