@@ -140,6 +140,7 @@ mininet> sh ovs-ofctl add-flow s2 -O OpenFlow13 "in_port=2,action=output:1“
 
 
 
+## Topology Mininet 3 host dan 3 switch
 
 - ### Topolgy yang digunakan
 
