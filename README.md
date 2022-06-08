@@ -34,12 +34,12 @@ Pada Ketentuan tugas Kita akan membuat akun EC2 INSTANCE dengan spesifikasi seba
 ![Screenshot from 2022-06-07 13-41-10](https://user-images.githubusercontent.com/83495936/172538678-635fde78-47df-4748-8147-21a8eb170b09.png)
 
 - ### Setelah Selesai Melakukan Konfigurasi EC2, Saya akan menghubungkannya dengan terminal ubuntu
-<br> Dengan melakukan perintah ssh -i labsuser.pem ubuntu@ipaddress </br>
+<br> Dengan melakukan perintah ``` ssh -i labsuser.pem ubuntu@ipaddress``` </br>
 
 ![Screenshot from 2022-06-07 13-54-32](https://user-images.githubusercontent.com/83495936/172539424-5be6a254-6bb1-4a45-aff5-fc7117841a47.png)
 
 - ### Setelah EC2 Instance siap, Selanjunta instalasi Mininet+OpenFlow, Ryu
-<br> Langkah Pertama dengan mengupdate dan mengupgrade server ubuntu dengan perintah sudo apt -yy update && sudo apt -yy upgrade  </br>
+<br> Langkah Pertama dengan mengupdate dan mengupgrade server ubuntu dengan perintah ``` sudo apt -yy update && sudo apt -yy upgrade```  </br>
 
 
 ![Screenshot from 2022-06-07 13-57-27](https://user-images.githubusercontent.com/83495936/172539980-c9303556-870e-4a19-906d-f29122ec253f.png)
@@ -47,9 +47,9 @@ Pada Ketentuan tugas Kita akan membuat akun EC2 INSTANCE dengan spesifikasi seba
 
 <br> Langkah Kedua Unduh repository Mininet dengan perintah ``` git clone https://github.com/mininet/mininet ``` dan lakukan instalasi dengan perintah ``` mininet/util/install.sh -nfv``` </br>
 
-<br> Langkah Ketiga Unduh repository RYU dengan perintah git clone https://github.com/mininet/mininet  dan lakukan instalasi dengan perintah cd ryu; pip install </br>
+<br> Langkah Ketiga Unduh repository RYU dengan perintah ``` git clone https://github.com/mininet/mininet```  dan lakukan instalasi dengan perintah ```cd ryu; pip install``` </br>
 
-<br> Langkah Keempat Unduh repository Flow Manager dengan perintah git clone https://github.com/martimy/flowmanager  setelah selesai kita cek dengan perintah ls </br>
+<br> Langkah Keempat Unduh repository Flow Manager dengan perintah ```git clone https://github.com/martimy/flowmanager ``` setelah selesai kita cek dengan perintah ```ls``` </br>
 
 
 
