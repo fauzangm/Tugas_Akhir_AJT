@@ -131,13 +131,43 @@ topos = { 'mytopo': ( lambda: MyTopo() ) }
 
 
 - ### Setelah itu akan menjalankan mininet tanpa controller menggunakan custom topo yang sudah dibuat
-<br> Lakukan dengan perintah sudo mn --controller=none --custom custom_topo_2sw2h.py --topo mytopo --mac --arp
+<br> Lakukan dengan perintah ```sudo mn --controller=none --custom custom_topo_2sw2h.py --topo mytopo --mac --arp```
+
+![Screenshot from 2022-06-08 15-15-33](https://user-images.githubusercontent.com/83495936/172567255-8b906d91-82b0-4eea-aa47-bc0839d276ce.png)
+
 
 
 - ### Membuat Flow agar h1,h2 dan h3 saling terhubung dengan perintah 
+```
+mininet> sh ovs-ofctl add-flow s2 -O OpenFlow13 "in_port=4,action=output:1"
+mininet> sh ovs-ofctl add-flow s2 -O OpenFlow13 "in_port=1,action=output:4"
+mininet> sh ovs-ofctl add-flow s3 -O OpenFlow13 "in_port=4,action=output:1"
+mininet> sh ovs-ofctl add-flow s3 -O OpenFlow13 "in_port=1,action=output:4"
+mininet> sh ovs-ofctl add-flow s2 -O OpenFlow13 "in_port=2,action=output:4"
+mininet> sh ovs-ofctl add-flow s2 -O OpenFlow13 "in_port=4,action=output:2"
+mininet> sh ovs-ofctl add-flow s1 -O OpenFlow13 "in_port=4,action=output:2"
+mininet> sh ovs-ofctl add-flow s1 -O OpenFlow13 "in_port=2,action=output:4"
+mininet> sh ovs-ofctl add-flow s1 -O OpenFlow13 "in_port=1,action=output:3"
+mininet> sh ovs-ofctl add-flow s1 -O OpenFlow13 "in_port=3,action=output:1"
+mininet> sh ovs-ofctl add-flow s3 -O OpenFlow13 "in_port=3,action=output:1"
+mininet> sh ovs-ofctl add-flow s3 -O OpenFlow13 "in_port=1,action=output:3"
+```
+
+![Screenshot from 2022-06-08 15-24-03](https://user-images.githubusercontent.com/83495936/172568948-f303bbd2-9652-4bf7-b4ee-7184da32ba8a.png)
 
 
-- ### Melakuka Uji Koneksi
+
+
+- ### Melihat flow dengan perintah
+
+```dpctl dump-flows -O OpenFlow13```
+
+![Screenshot from 2022-06-08 15-26-56](https://user-images.githubusercontent.com/83495936/172569712-9b387acf-8dfd-4b13-af0f-9568e23c5a3c.png)
+
+
+
+
+
 
 
 ## MEMBUAT APLIKASI RYU LOAD BALANCER SEPERTI PADA TUGAS 3
