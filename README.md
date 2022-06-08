@@ -16,12 +16,14 @@
 
 ## MEMBUAT EC2 INSTANCE di AWS ACADEMY
 Pada Ketentuan tugas Kita akan membuat akun EC2 INSTANCE dengan spesifikasi sebagai berikut
--Name and tags: Tugas Akhir
-(\br)-OS Images: Ubuntu Server 22.04 LTS 64 bit
--Instance type: t2.medium
--Key pair: vockey
--Edit Network settings: allow SSH, allow HTTP, allow HTTPS, allow TCP port 8080, allow TCP port 8081
--Configure storage: 30 GiB, gp3
+- Name and tags	= Tugas Akhir
+- OS Images	= Ubuntu Server 22.04 LTS 64 bit
+- Instance type	= t2.medium
+- Key pair	= vockey
+- Edit Network settings	= allow SSH, allow HTTP, allow HTTPS, allow TCP port 8080, allow TCP port 8081
+- Configure storage	= 30 GiB, gp3
+
+
 
 
 ## Dynamic Analysis
