@@ -512,27 +512,30 @@ self.serverlist.append({'ip':"10.0.0.4", 'mac':"00:00:00:00:00:04",
 ````ryu-manager``` 
 
 
+![Screenshot from 2022-04-10 15-53-58](https://user-images.githubusercontent.com/83495936/172579401-4b54df52-7dd6-43f3-a3dd-4dd774611055.png)
+
+
 
 
 ### Melakukan perintah pada console kedua 
 ```sudo mn --controller=remote --topo single,4 –mac ```
 
 
+![Screenshot from 2022-04-10 15-53-58](https://user-images.githubusercontent.com/83495936/172579401-4b54df52-7dd6-43f3-a3dd-4dd774611055.png)
 
-![Screenshot from 2022-06-08 15-44-52](https://user-images.githubusercontent.com/83495936/172573684-e4065c91-e904-42f1-bd37-51e04d8e8949.png)
 
 ### Pada bagian h2,h3,h4 akan menjadi web server dan memberikan paket ke client yaitu h1. Pada sisi h1 webserver dan didapati dengan algoritma round robin yang memberikan paket ke h1 adalah server h2 dengan ip 10.0.0.2
 
+![Screenshot from 2022-04-10 15-58-22](https://user-images.githubusercontent.com/83495936/172579471-471f1797-0485-473e-9f06-8288b7c1d126.png)
 
-![Screenshot from 2022-06-08 15-45-03](https://user-images.githubusercontent.com/83495936/172574962-e37b0630-f403-4565-a475-2bd3abe851dd.png)
 
 ### Melakukan akses kembali ke webserver 
 
 <br> Melakukan akses ke webserver dengan  h1 berulang kali untuk memastikan algoritma Round-Robin berjalan dengan baik dan melakukan ```dpctl dump-flows -O openflow13``` untuk melihat flow </br>
 
 
-![Screenshot from 2022-06-08 15-45-15](https://user-images.githubusercontent.com/83495936/172575010-bccee340-af2b-4395-852f-c1807f693a32.png)
 
+![Screenshot from 2022-04-10 16-07-06](https://user-images.githubusercontent.com/83495936/172579495-28041daa-ba33-493e-ba6f-657b6a493504.png)
 
 
 
