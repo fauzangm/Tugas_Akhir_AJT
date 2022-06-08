@@ -390,13 +390,20 @@ self.serverlist.append({'ip':"10.0.0.4", 'mac':"00:00:00:00:00:04",
 
 
 
-### Melakukan perintah ryu-manager pada terminal satu, dan melakukan perintah sudo mn --controller=remote --topo single,4 –mac pada terminal dua
+### Melakukan perintah pada console pertama 
+````ryu-manager``` 
+
+### Melakukan perintah pada console kedua 
+```sudo mn --controller=remote --topo single,4 –mac ```
 
 
 ### Pada bagian h2,h3,h4 akan menjadi web server dan memberikan paket ke client yaitu h1. Pada sisi h1 webserver dan didapati dengan algoritma round robin yang memberikan paket ke h1 adalah server h2 dengan ip 10.0.0.2
 
 
-### Melakukan akses kembali ke webserver kepada h1 berulang kali untuk memastikan algoritma Round-Robin berjalan dengan baik dan melakukan dpctl dump-flows -O openflow13 untuk melihat flow
+### Melakukan akses kembali ke webserver 
+
+<br> Melakukan akses ke webserver dengan  h1 berulang kali untuk memastikan algoritma Round-Robin berjalan dengan baik dan melakukan ```dpctl dump-flows -O openflow13``` untuk melihat flow </br>
+
 
 
 
