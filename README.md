@@ -45,7 +45,7 @@ Pada Ketentuan tugas Kita akan membuat akun EC2 INSTANCE dengan spesifikasi seba
 ![Screenshot from 2022-06-07 13-57-27](https://user-images.githubusercontent.com/83495936/172539980-c9303556-870e-4a19-906d-f29122ec253f.png)
 
 
-<br> Langkah Kedua Unduh repository Mininet dengan perintah git clone https://github.com/mininet/mininet  dan lakukan instalasi dengan perintah mininet/util/install.sh -nfv </br>
+<br> Langkah Kedua Unduh repository Mininet dengan perintah ``` git clone https://github.com/mininet/mininet ``` dan lakukan instalasi dengan perintah ``` mininet/util/install.sh -nfv``` </br>
 
 <br> Langkah Ketiga Unduh repository RYU dengan perintah git clone https://github.com/mininet/mininet  dan lakukan instalasi dengan perintah cd ryu; pip install </br>
 
