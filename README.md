@@ -90,6 +90,7 @@ Pada Ketentuan tugas Kita akan membuat akun EC2 INSTANCE dengan spesifikasi seba
 
 - ### Program yang digunakan
 
+```
 # Copyright (C) 2011 Nippon Telegraph and Telephone Corporation.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -308,7 +309,18 @@ datapath.send_msg(flow_mod2)
 print("<++++++++Reply sent from server: "+str(server_ip_selected)+",
 MAC: "+str(server_mac_selected)+". Via load balancer:
 "+str(self.virtual_lb_ip)+".
+```
 
+### Memodifikasi Source Code pada sisi server dengan ip, mac dan outport sebagai berikut dan menentukan virtual ip server: 10.0.0.100
+
+<br>self.serverlist.append({'ip':"10.0.0.2", 'mac':"00:00:00:00:00:02",
+"outport":"2"}) </br>
+
+<br>self.serverlist.append({'ip':"10.0.0.3", 'mac':"00:00:00:00:00:03",
+"outport":"3"}) </br>
+
+<br>self.serverlist.append({'ip':"10.0.0.4", 'mac':"00:00:00:00:00:04",
+"outport":"4"}) </br>
 
 
 
